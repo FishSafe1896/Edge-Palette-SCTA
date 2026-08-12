@@ -40,7 +40,7 @@ tests/      lightweight project checks
 docs/       experiment notes and reproducibility records
 ```
 
-Large model parameters are distributed as GitHub Release assets instead of Git history. See [WEIGHTS.md](WEIGHTS.md) for the exact extraction locations and SHA-256 checksums. S2WAT is intentionally not mirrored in this release because its checkpoint is large; its official repository is linked there. The comparison source repositories are also listed there: [CAST_pytorch](https://github.com/zyxElsa/CAST_pytorch) and [Aflutter Craft](https://github.com/Aflutter-Craft/Network).
+Large model parameters are distributed as GitHub Release assets instead of Git history. See [WEIGHTS.md](WEIGHTS.md) for the exact extraction locations. S2WAT is intentionally not mirrored in this release because its checkpoint is large; its official repository is linked there. The comparison source repositories are also listed there: [CAST_pytorch](https://github.com/zyxElsa/CAST_pytorch) and [Aflutter Craft](https://github.com/Aflutter-Craft/Network).
 
 ## Installation
 
@@ -61,7 +61,7 @@ python scripts/verify_project_assets.py
 
 ## Download Weights
 
-Download the available ZIP assets from the [v1.0.0 release](https://github.com/FishSafe1896/Edge-Palette-SCTA/releases/tag/v1.0.0), verify them with `SHA256SUMS.txt`, and extract them according to [WEIGHTS.md](WEIGHTS.md). The release includes the final `EPS-SCTA_ours_best` checkpoint and the available comparison-model checkpoints. S2WAT parameters are obtained from its official repository. Ablation checkpoints are intentionally excluded.
+Download the available ZIP assets from the [v1.0.0 release](https://github.com/FishSafe1896/Edge-Palette-SCTA/releases/tag/v1.0.0) and extract them according to [WEIGHTS.md](WEIGHTS.md). The release includes the final `EPS-SCTA_ours_best` checkpoint and the available comparison-model checkpoints. S2WAT parameters are obtained from its official repository. Ablation checkpoints are intentionally excluded.
 
 ## Inference
 

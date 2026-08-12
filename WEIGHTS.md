@@ -51,16 +51,7 @@ checkpoints/ours_EPS-SCTA_best_checkpoint.pkl
 weights/vgg_normalised.pth
 ```
 
-## Verification
-
-Run the following from the repository root after downloading the assets:
-
-```powershell
-Get-FileHash .\weight_packages\*.zip -Algorithm SHA256
-python scripts/verify_project_assets.py
-```
-
-The authoritative package hashes are stored in `SHA256SUMS.txt` in the release asset bundle. For S2WAT, download the checkpoint from the [official S2WAT repository](https://github.com/AlienZhang1996/S2WAT) and place it at `src/baselines/S2WAT/pre_trained_models/checkpoint/checkpoint_40000_epoch.pkl`. Do not use the old exploratory or ablation checkpoints for reproducing the reported final model.
+For S2WAT, download the checkpoint from the [official S2WAT repository](https://github.com/AlienZhang1996/S2WAT) and place it at `src/baselines/S2WAT/pre_trained_models/checkpoint/checkpoint_40000_epoch.pkl`. Do not use the old exploratory or ablation checkpoints for reproducing the reported final model.
 
 ## 中文说明
 
@@ -73,4 +64,4 @@ checkpoints/ours_EPS-SCTA_best_checkpoint.pkl
 weights/vgg_normalised.pth
 ```
 
-StyTR-2、CAST、S2WAT 和 Aflutter Craft 的参数应分别放到各自源码目录中原脚本要求的位置。`weight_packages/SHA256SUMS.txt` 保存了发布包的 SHA-256 校验值。完成解压后运行 `python scripts/verify_project_assets.py` 检查项目资源。
+StyTR-2、CAST、S2WAT 和 Aflutter Craft 的参数应分别放到各自源码目录中原脚本要求的位置。Release 中的 `SHA256SUMS.txt` 保存了已上传发布包的 SHA-256 校验值。完成解压后运行 `python scripts/verify_project_assets.py` 检查项目资源。
