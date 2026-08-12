@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.idea/
+.vscode/
+logs/
+outputs/
+tmp/
+*.zip
+*.html
+*.bin
+checkpoints/
+weights/
+src/ChinesePaperCutting/ChinesePaperCutting_Transfer/pre_trained_models/
