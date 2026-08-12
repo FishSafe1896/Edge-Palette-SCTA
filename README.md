@@ -40,7 +40,7 @@ tests/      lightweight project checks
 docs/       experiment notes and reproducibility records
 ```
 
-Large model parameters are distributed as GitHub Release assets instead of Git history. See [WEIGHTS.md](WEIGHTS.md) for the exact extraction locations and SHA-256 checksums.
+Large model parameters are distributed as GitHub Release assets instead of Git history. See [WEIGHTS.md](WEIGHTS.md) for the exact extraction locations and SHA-256 checksums. S2WAT is intentionally not mirrored in this release because its checkpoint is large; its official repository is linked there. The comparison source repositories are also listed there: [CAST_pytorch](https://github.com/zyxElsa/CAST_pytorch) and [Aflutter Craft](https://github.com/Aflutter-Craft/Network).
 
 ## Installation
 
@@ -61,7 +61,7 @@ python scripts/verify_project_assets.py
 
 ## Download Weights
 
-Download the five ZIP assets from the [v1.0.0 release](https://github.com/FishSafe1896/Edge-Palette-SCTA/releases/tag/v1.0.0), verify them with `weight_packages/SHA256SUMS.txt`, and extract them according to [WEIGHTS.md](WEIGHTS.md). The release includes the final `EPS-SCTA_ours_best` checkpoint and the comparison-model checkpoints. Ablation checkpoints are intentionally excluded.
+Download the available ZIP assets from the [v1.0.0 release](https://github.com/FishSafe1896/Edge-Palette-SCTA/releases/tag/v1.0.0), verify them with `SHA256SUMS.txt`, and extract them according to [WEIGHTS.md](WEIGHTS.md). The release includes the final `EPS-SCTA_ours_best` checkpoint and the available comparison-model checkpoints. S2WAT parameters are obtained from its official repository. Ablation checkpoints are intentionally excluded.
 
 ## Inference
 
@@ -118,6 +118,6 @@ If this repository contributes to your research, please cite the paper:
 - **Paper-cut prior loss**：结合形态学边缘一致性与正红色、白色紧凑调色板约束。
 - **可复现实验协议**：固定 content-style 配对、SSIM、LPIPS-content、FID、Colors 四项指标、消融记录以及多模型可视化结果。
 
-大体积权重不放入 Git 历史，而是放在 GitHub Release 中。请阅读 [WEIGHTS.md](WEIGHTS.md) 完成下载、校验和解压。消融实验权重不在发布包中。
+大体积权重不放入 Git 历史，而是放在 GitHub Release 中。请阅读 [WEIGHTS.md](WEIGHTS.md) 完成下载、校验和解压。S2WAT 权重体积较大，本仓库不镜像上传，改为提供其官方 GitHub 地址。消融实验权重不在发布包中。
 
 使用 Python 3.12 安装依赖后，可先运行 `python scripts/verify_project_assets.py` 检查数据与代码，再根据上面的命令进行推理。完整的模型权重位置、Release 附件名称和 SHA-256 校验值见 [WEIGHTS.md](WEIGHTS.md)。

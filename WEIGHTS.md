@@ -9,8 +9,10 @@ The large parameter files are distributed in the [v1.0.0 GitHub Release](https:/
 | `EPS-SCTA_ours_best_weights.zip` | Final Edge-Palette-SCTA best checkpoint and VGG encoder weights |
 | `StyTR-2_weights.zip` | StyTR-2 transformer, decoder, embedding, and VGG weights |
 | `CAST_weights.zip` | CAST autoencoder, decoders, style VGG, and VGG weights |
-| `S2WAT_weights.zip` | S2WAT checkpoint |
+| S2WAT official repository | S2WAT source code and checkpoint instructions; the large checkpoint is not mirrored here |
 | `Aflutter-Craft_weights.zip` | Aflutter Craft VGG, transformer, and decoder weights |
+
+Official comparison repositories: [CAST_pytorch](https://github.com/zyxElsa/CAST_pytorch), [Aflutter Craft Network](https://github.com/Aflutter-Craft/Network), and [S2WAT](https://github.com/AlienZhang1996/S2WAT).
 
 ## Extraction Map
 
@@ -37,9 +39,6 @@ CAST_weights.zip
   -> src/baselines/CAST_pytorch/checkpoints/CAST_model/ for the three network files;
      put style_vgg.pth and vgg_normalised.pth in src/baselines/CAST_pytorch/models/
 
-S2WAT_weights.zip
-  checkpoint_40000_epoch.pkl -> src/baselines/S2WAT/pre_trained_models/checkpoint/
-
 Aflutter-Craft_weights.zip
   vgg.pth, transformer.pth, decoder.pth
   -> external/Aflutter-Craft-API/models/
@@ -61,11 +60,11 @@ Get-FileHash .\weight_packages\*.zip -Algorithm SHA256
 python scripts/verify_project_assets.py
 ```
 
-The authoritative package hashes are stored in `weight_packages/SHA256SUMS.txt` in the release asset bundle. Do not use the old exploratory or ablation checkpoints for reproducing the reported final model.
+The authoritative package hashes are stored in `SHA256SUMS.txt` in the release asset bundle. For S2WAT, download the checkpoint from the [official S2WAT repository](https://github.com/AlienZhang1996/S2WAT) and place it at `src/baselines/S2WAT/pre_trained_models/checkpoint/checkpoint_40000_epoch.pkl`. Do not use the old exploratory or ablation checkpoints for reproducing the reported final model.
 
 ## 中文说明
 
-大体积模型参数放在 [v1.0.0 GitHub Release](https://github.com/FishSafe1896/Edge-Palette-SCTA/releases/tag/v1.0.0) 中，不放入 Git 历史。发布包只包含最终模型和对比模型参数，不包含消融实验权重。
+大体积模型参数放在 [v1.0.0 GitHub Release](https://github.com/FishSafe1896/Edge-Palette-SCTA/releases/tag/v1.0.0) 中，不放入 Git 历史。发布包包含最终模型以及可直接分发的对比模型参数，不包含消融实验权重。S2WAT 参数由于体积较大不镜像上传，请从其[官方仓库](https://github.com/AlienZhang1996/S2WAT)获取。CAST 和 Aflutter Craft 的官方源码分别见 [CAST_pytorch](https://github.com/zyxElsa/CAST_pytorch) 和 [Aflutter Craft Network](https://github.com/Aflutter-Craft/Network)。
 
 下载五个 ZIP 后解压到仓库根目录。最终模型的最优权重应放置为：
 
