@@ -57,11 +57,11 @@ For S2WAT, download the checkpoint from the [official S2WAT repository](https://
 
 大体积模型参数放在 [v1.0.0 GitHub Release](https://github.com/FishSafe1896/Edge-Palette-SCTA/releases/tag/v1.0.0) 中，不放入 Git 历史。发布包包含最终模型以及可直接分发的对比模型参数，不包含消融实验权重。S2WAT 参数由于体积较大不镜像上传，请从其[官方仓库](https://github.com/AlienZhang1996/S2WAT)获取。CAST 和 Aflutter Craft 的官方源码分别见 [CAST_pytorch](https://github.com/zyxElsa/CAST_pytorch) 和 [Aflutter Craft Network](https://github.com/Aflutter-Craft/Network)。
 
-下载五个 ZIP 后解压到仓库根目录。最终模型的最优权重应放置为：
+下载 Release 中的 ZIP 后解压到仓库根目录。最终模型的最优权重应放置为：
 
 ```text
 checkpoints/ours_EPS-SCTA_best_checkpoint.pkl
 weights/vgg_normalised.pth
 ```
 
-StyTR-2、CAST、S2WAT 和 Aflutter Craft 的参数应分别放到各自源码目录中原脚本要求的位置。Release 中的 `SHA256SUMS.txt` 保存了已上传发布包的 SHA-256 校验值。完成解压后运行 `python scripts/verify_project_assets.py` 检查项目资源。
+StyTR-2、CAST、S2WAT 和 Aflutter Craft 的参数应分别放到各自源码目录中原脚本要求的位置。完成解压后运行 `python scripts/verify_project_assets.py` 检查项目资源。
